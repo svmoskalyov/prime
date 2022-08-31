@@ -1,0 +1,38 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+$text-font: (
+  'primary': Open Sans,
+);
+
+// $text-wght: (
+//   'primary': Open Sans,
+// );
+
+// $text-size: (
+//   'primary': Open Sans,
+// );
+
+// $text-line-height: (
+//   'primary': Open Sans,
+// );
+
+// Colors
+$colors: (
+  'body': #fff,
+  'accent': #005541,
+  'text': #333,
+  'bg-color': #00261d,
+);
+
+
+// Container's maximum width
+$max-width-container: 1200px;
+
+// Breakpoints map
+$breakpoints: (
+  'mobile': 479.98px,
+  'tablet': 767.98px,
+  'desktop': 1199.98px,
+);
+

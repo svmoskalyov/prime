@@ -1,0 +1,18 @@
+@function itemFont($key) {
+  @return map-get($text-font, $key);
+}
+
+// @function itemWght($key) {
+//   @return map-get($text-font, $key);
+// }
+// @function itemSize($key) {
+//   @return map-get($text-font, $key);
+// }
+// @function itemLineHeight($key) {
+//   @return map-get($text-font, $key);
+// }
+
+
+@function itemColor($key) {
+  @return map-get($colors, $key);
+}

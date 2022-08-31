@@ -1,17 +1,16 @@
-// @import 'base/normalize';
-// @import 'base/reset';
-// @import 'base/typography';
-// @import 'base/colors';
-// @import 'base/body';
-// @import 'base/container';
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
 
-// @import 'utils/visually-hidden';
-// @import 'utils/breakpoints';
-// @import 'utils/placeholders';
-// @import 'utils/mixins';
+@import 'vendors/normalize';
 
-// @import 'components/buttons';
-// @import 'components/cover';
+@import 'base/reset';
+@import 'base/helpers';
+@import 'base/base';
+@import 'base/typography';
 
-// @import 'layout/header';
-// @import 'layout/navigation';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/navigation';
+
+@import 'components/button';

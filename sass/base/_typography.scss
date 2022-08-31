@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-
-$font: (
-  'primary': Open Sans,
-);
-
-@function itemFont($key) {
-  @return map-get($font, $key);
+body {
+  font-family: itemFont(primary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.62;
+  color: itemColor(text);
+  background-color: itemColor(body);
 }
