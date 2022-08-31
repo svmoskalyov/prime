@@ -19,5 +19,5 @@
 }
 
 @function itemPoint($key) {
-  @return map-get($colors, $key);
+  @return map-get($pointbreak, $key);
 }
