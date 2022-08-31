@@ -1,27 +1,26 @@
-@mixin itemSize($width, $height: $width) {
+@mixin mixSize($width, $height: $width) {
   width: $width;
   height: $height;
 }
 
-@mixin itemTypography($weight: itemWght(regular), $size: itemSize(0), $height: itemLineHeight(0)) {
+@mixin mixTypography($weight: funWght(regular), $size: funSize(0), $height: funLineHeight(0)) {
   font-weight: $weight;
   font-size: $size;
   line-height: $height;
   font-style: normal;
 }
 
-@mixin itemPosition($values) {
-  position: $values;
+@mixin mixPosition($type: relative) {
+  position: $type;
   top: 0;
   left: 0;
 }
 
-// ------------------------------------
-// @mixin centeredFlex($type: flex) {
-//   display: $type;
-//   align-items: center;
-//   justify-content: center;
-// }
+@mixin mixFlex($type: flex) {
+  display: $type;
+  align-items: center;
+  justify-content: center;
+}
 
 // @mixin itemTransition($props...) {
 //   $result: ();
@@ -31,14 +30,13 @@
 //   transition: $result;
 // }
 
-
-@mixin respond-to($breakpoint) {
+@mixin mixBreakpoint($breakpoint) {
   $raw-query: map-get($breakpoints, $breakpoint);
 
   @if $raw-query {
     $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
 
-    @media #{$query} {
+    @media screen and #{$query} {
       @content;
     }
   } @else {
@@ -46,6 +44,24 @@
          + 'Please make sure it is defined in `$breakpoints` map.';
   }
 }
+
+// @mixin photo($photo) {
+//   background-image: url($photo);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+// }
+
+// @mixin button-theme($color, $color-text-hover: $color-light) {
+//     color: $color;
+//     border-color: $color;
+//     background-color: transparent;
+
+//     &:hover {
+//         color: $color-text-hover;
+//         background-color: $color;
+//     }
+// }
 
 // @mixin shadows($shadows...) {
 // type-of($shadows) == 'arglist'
@@ -69,22 +85,4 @@
 //       @content;
 //     }
 //   }
-// }
-
-// @mixin photo($photo) {
-//   background-image: url($photo);
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center;
-// }
-
-// @mixin button-theme($color, $color-text-hover: $color-light) {
-//     color: $color;
-//     border-color: $color;
-//     background-color: transparent;
-
-//     &:hover {
-//         color: $color-text-hover;
-//         background-color: $color;
-//     }
 // }

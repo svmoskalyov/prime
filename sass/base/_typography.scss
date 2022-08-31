@@ -1,6 +1,6 @@
 body {
-  @include itemTypography;
-  font-family: itemFont(primary);
-  color: itemColor(text);
-  background-color: itemColor(body);
+  @include mixTypography;
+  font-family: funFont(primary), funFont(secondory);
+  color: funColor(text);
+  background-color: funColor(body);
 }

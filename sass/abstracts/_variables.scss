@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 $text-font: (
-  'primary': Open Sans,
+  'primary': 'Open Sans',
+  'secondory': 'sans-serif',
 );
 
 $text-wght: (
@@ -36,8 +37,7 @@ $max-width-container: 1200px;
 $pointbreak: (
   'small': 480px,
   'medium': 768px,
-  'large': 1024px,
-  'huge': 1200px,
+  'large': 1200px,
 );
 
 $breakpoints: (
@@ -48,9 +48,6 @@ $breakpoints: (
     min-width: 768px,
   ),
   'large': (
-    min-width: 1024px,
-  ),
-  'huge': (
     min-width: 1200px,
   ),
 );
