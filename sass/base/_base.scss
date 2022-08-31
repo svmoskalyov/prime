@@ -7,15 +7,15 @@
   padding-right: 15px;
   width: 100%;
 
-  @include respond-to('small') {
+  @include respond-to(small) {
     width: itemPoint(small);
   }
 
-  @include respond-to('medium') {
+  @include respond-to(medium) {
     width: itemPoint(medium);
   }
 
-  @include respond-to('huge') {
+  @include respond-to(huge) {
     width: itemPoint(huge);
   }
 }
