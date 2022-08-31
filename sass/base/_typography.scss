@@ -1,9 +1,6 @@
 body {
+  @include itemTypography;
   font-family: itemFont(primary);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.62;
   color: itemColor(text);
   background-color: itemColor(body);
 }

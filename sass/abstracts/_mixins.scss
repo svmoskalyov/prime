@@ -1,0 +1,90 @@
+@mixin itemSize($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin itemTypography($weight: itemWght(regular), $size: itemSize(0), $height: itemLineHeight(0)) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  font-style: normal;
+}
+
+@mixin itemPosition($values) {
+  position: $values;
+  top: 0;
+  left: 0;
+}
+
+// ------------------------------------
+// @mixin centeredFlex($type: flex) {
+//   display: $type;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// @mixin itemTransition($props...) {
+//   $result: ();
+//   @each $prop in $props {
+//     $result: append($result, ($prop 250ms cubic-bezier(0.4, 0, 0.2, 1)), $separator: comma);
+//   }
+//   transition: $result;
+// }
+
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+// @mixin shadows($shadows...) {
+// type-of($shadows) == 'arglist'
+// …
+// }
+
+// @mixin on-event($self: false) {
+//   @if $self {
+//     &,
+//     &:hover,
+//     &:active,
+//     &:focus,
+//     &:focus-within {
+//       @content;
+//     }
+//   } @else {
+//     &:hover,
+//     &:active,
+//     &:focus,
+//     &:focus-within {
+//       @content;
+//     }
+//   }
+// }
+
+// @mixin photo($photo) {
+//   background-image: url($photo);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+// }
+
+// @mixin button-theme($color, $color-text-hover: $color-light) {
+//     color: $color;
+//     border-color: $color;
+//     background-color: transparent;
+
+//     &:hover {
+//         color: $color-text-hover;
+//         background-color: $color;
+//     }
+// }
