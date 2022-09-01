@@ -1,7 +1,6 @@
 (() => {
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
-  // const mobilePhBtn = document.querySelector("[data-ph-btn]");
   
   menuBtnRef.addEventListener("click", () => {
     const expanded =
@@ -12,7 +11,6 @@
 
     mobileMenuRef.classList.toggle("is-open");
     document.body.classList.toggle("overflow");
-    // mobilePhBtn.classList.toggle("active");
   });
 })();
 

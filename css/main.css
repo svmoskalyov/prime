@@ -372,7 +372,7 @@ body {
 }
 
 .page-haeder {
-  outline: 2px solid blue;
+  background-color: tomato;
 }
 
 .navigation {
@@ -389,12 +389,13 @@ body {
 }
 
 .logo {
+  position: relative;
+  z-index: 12;
   display: inline-block;
 }
 
 .logo__img {
   width: 110px;
-  background-color: green;
 }
 
 .navigation__list {
@@ -403,19 +404,26 @@ body {
   top: 5%;
   left: 0;
   width: 100vw;
-  padding: 20px;
-  background-color: palegreen;
+  height: 100vh;
+  padding: 80px 20px 15px;
   text-align: center;
+  color: white;
+  background-color: tomato;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   -webkit-transition: opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 2500ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: auto;
 }
 .navigation__list.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
+}
+
+.navigation__item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .menu-button {
@@ -428,15 +436,16 @@ body {
   padding: 0;
   border: none;
   border-radius: 4px;
-  outline: 2px solid tomato;
-  background-color: green;
-  fill: greenyellow;
+  background-color: transparent;
 }
 .menu-button__close {
   display: none;
 }
 .menu-button.is-open .menu-button__menu {
   display: none;
+}
+.menu-button.is-open .menu-button__icon {
+  padding: 11px;
 }
 .menu-button.is-open .menu-button__close {
   display: block;
