@@ -1,7 +1,7 @@
 (() => {
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
-  const mobilePhBtn = document.querySelector("[data-ph-btn]");
+  // const mobilePhBtn = document.querySelector("[data-ph-btn]");
   
   menuBtnRef.addEventListener("click", () => {
     const expanded =
@@ -12,13 +12,13 @@
 
     mobileMenuRef.classList.toggle("is-open");
     document.body.classList.toggle("overflow");
-    mobilePhBtn.classList.toggle("active");
+    // mobilePhBtn.classList.toggle("active");
   });
 })();
 
-$(".nav__link").click(function () {
-  $(".mobile-menu").removeClass("is-open");
-  $(".menu-btn").removeClass("is-open");
-  $(".page-header__btn").removeClass("active");
-  $("body").removeClass("overflow");
-});
+// $(".navigation__link").click(function () {
+//   $(".menu").removeClass("is-open");
+//   $(".menu-button").removeClass("is-open");
+//   // $(".page-header__btn").removeClass("active");
+//   $("body").removeClass("overflow");
+// });

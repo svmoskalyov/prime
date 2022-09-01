@@ -1,0 +1,59 @@
+.menu-button {
+    z-index: 11;
+    position: relative;
+    // top: 0;
+    
+
+    // position: absolute;
+    // top: 5%;
+    // right: 5%;
+ 
+
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  // background-color: transparent;
+
+  outline: 2px solid tomato;
+  background-color: green;
+  fill: greenyellow;
+
+  &__close {
+    display: none;
+  }
+
+  &.is-open {
+    .menu-button__menu {
+      display: none;
+    }
+
+    .menu-button__close {
+      display: block;
+      cursor: pointer;
+      stroke: funColor(body);
+
+      transition: stroke 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        stroke: funColor(accent);
+      }
+    }
+  }
+
+  //   for desktop
+  //   @media screen and (min-width: $desktop) {
+  //     display: none;
+  //   }
+}
+
+.menu-button__icon {
+}
+
+.menu-button__menu {
+}
+
+.menu {
+}

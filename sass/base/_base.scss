@@ -1,4 +1,10 @@
 //  Main content containers
+body {
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
 .container {
   max-width: $max-width-container;
   margin-left: auto;
