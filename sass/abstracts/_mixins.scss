@@ -3,7 +3,7 @@
   height: $height;
 }
 
-@mixin mixTypography($weight: funWght(regular), $size: funSize(0), $height: funLineHeight(0)) {
+@mixin mixTypography($weight: funWght(regular), $size: funSize(norm), $height: funLineHeight(one)) {
   font-weight: $weight;
   font-size: $size;
   line-height: $height;

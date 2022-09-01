@@ -13,16 +13,16 @@ $text-wght: (
 );
 
 $text-size: (
-  '2': 48px,
-  '1': 24px,
-  '0': 18px,
-  '-1': 16px,
-  '-2': 14px,
+  'larg': 48px,
+  'big': 24px,
+  'norm': 18px,
+  'med': 16px,
+  'smal': 14px,
 );
 
 $text-line-height: (
-  '0': 1.6,
-  '-1': 1.3,
+  'one': 1.6,
+  'two': 1.3,
 );
 
 $colors: (
@@ -35,19 +35,19 @@ $colors: (
 $max-width-container: 1200px;
 
 $pointbreak: (
-  'small': 480px,
-  'medium': 768px,
   'large': 1200px,
+  'medium': 768px,
+  'small': 480px,
 );
 
 $breakpoints: (
-  'small': (
-    min-width: 480px,
+  'large': (
+    min-width: 1200px,
   ),
   'medium': (
     min-width: 768px,
   ),
-  'large': (
-    min-width: 1200px,
+  'small': (
+    min-width: 480px,
   ),
 );

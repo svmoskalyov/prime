@@ -3,83 +3,86 @@
 }
 
 .navigation {
-  //   position: relative;
   @include mixPosition;
-
-  //   display: flex;
-  //   align-items: center;
   @include mixFlex;
   justify-content: space-between;
+  min-height: 50px;
 
-  // for desktop
-  //     display: flex;
-  //     align-items: center;
-
-  //   @include mixFlex;
-  //     justify-content: space-evenly;
+  @include mixBreakpoint(large) {
+    min-height: 193px;
+    justify-content: space-evenly;
+  }
 }
 
 .logo {
-  //   position: relative;
   @include mixPosition;
   z-index: 12;
   display: inline-block;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  @include mixBreakpoint(large) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 }
 
 .logo__img {
-  // for mobile
-  //   width: 110px;
   @include mixSize(110px, 36px);
-  //   for desktop
-  //   width: 160px;
-  // @include mixSize(158px, 52px);
+
+  @include mixBreakpoint(large) {
+    @include mixSize(158px, 52px);
+  }
 }
 
 .navigation__list {
-  //   position: fixed;
-  //   top: 5%;
-  //   left: 0;
-  @include mixPosition(fixed);
-  z-index: 10;
+  @media screen and (max-width: funPoint(large)) {
+    @include mixPosition(fixed);
+    z-index: 10;
 
-  //   width: 100vw;
-  //   height: 100vh;
-  @include mixSize(100vw, 100vh);
+    @include mixSize(100vw, 100vh);
 
-  padding: 80px 20px 15px;
-  text-align: center;
+    padding: 80px 20px 15px;
+    text-align: center;
 
-//   color: white;
-//   background-color: tomato;
-color: funColor(body);
-background-color: funColor(bg-color);
+    color: funColor(body);
+    background-color: funColor(bg-color);
 
-  @include mixHiden(hiden);
-  @include itemTransition(opacity, visibility);
+    @include mixHiden(hiden);
+    @include itemTransition(opacity, visibility);
 
-  &.is-open {
-    @include mixHiden(appear);
+    &.is-open {
+      @include mixHiden(appear);
+    }
+
+    overflow: auto;
   }
 
-  overflow: auto;
-
-  // for desktop
-  //   display: flex;
+  @include mixBreakpoint(large) {
+    @include mixFlex;
+    color: funColor(body);
+  }
 }
-
-// .navigation__item {
-// }
 
 .navigation__item:not(:last-child) {
-  // for mobile
-  margin-bottom: 20px;
-  // for desktop
-  // margin-right: 30px;
+  @include mixBreakpoint(large) {
+    margin-right: 30px;
+  }
 }
 
-// .navigation__link {
-// for desktop
-// display: block;
-// padding-top: 30px;
-// padding-bottom: 30px;
-// }
+.navigation__link {
+  display: block;
+  padding: 11px 0;
+  @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(two));
+
+  @include mixBreakpoint(large) {
+    padding: 87px 0;
+  }
+
+  @include itemTransition(color);
+
+  &:hover,
+  &:focus {
+    color: funColor(accent);
+  }
+}
