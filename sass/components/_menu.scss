@@ -1,0 +1,37 @@
+.menu-button {
+  @include mixPosition;
+  z-index: 11;
+
+  @include mixFlex(inline-flex);
+  border-radius: 4px;
+
+  &__close {
+    display: none;
+  }
+
+  &.is-open {
+    .menu-button__menu {
+      display: none;
+    }
+
+    .menu-button__icon {
+      padding: 11px;
+    }
+
+    .menu-button__close {
+      display: block;
+      stroke: funColor(body);
+
+      @include itemTransition(stroke);
+
+      &:hover,
+      &:focus {
+        stroke: funColor(accent);
+      }
+    }
+  }
+
+  @include mixBreakpoint(large) {
+    display: none;
+  }
+}

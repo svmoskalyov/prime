@@ -1,17 +1,88 @@
-// .navigation {
-// }
+.page-haeder {
+  background-color: funColor(bg-color);
+}
 
-// .logo {
-// }
+.navigation {
+  @include mixPosition;
+  @include mixFlex;
+  justify-content: space-between;
+  min-height: 50px;
 
-// .logo__img {
-// }
+  @include mixBreakpoint(large) {
+    min-height: 193px;
+    justify-content: space-evenly;
+  }
+}
 
-// .navigation__list {
-// }
+.logo {
+  @include mixPosition;
+  z-index: 12;
+  display: inline-block;
+  padding-top: 7px;
+  padding-bottom: 7px;
 
-// .navigation__item {
-// }
+  @include mixBreakpoint(large) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
 
-// .navigation__link {
-// }
+.logo__img {
+  @include mixSize(110px, 36px);
+
+  @include mixBreakpoint(large) {
+    @include mixSize(158px, 52px);
+  }
+}
+
+.navigation__list {
+  @media screen and (max-width: funPoint(large)) {
+    @include mixPosition(fixed);
+    z-index: 10;
+
+    @include mixSize(100vw, 100vh);
+
+    padding: 80px 20px 15px;
+    text-align: center;
+
+    color: funColor(body);
+    background-color: funColor(bg-color);
+
+    @include mixHiden(hiden);
+    @include itemTransition(opacity, visibility);
+
+    &.is-open {
+      @include mixHiden(appear);
+    }
+
+    overflow: auto;
+  }
+
+  @include mixBreakpoint(large) {
+    @include mixFlex;
+    color: funColor(body);
+  }
+}
+
+.navigation__item:not(:last-child) {
+  @include mixBreakpoint(large) {
+    margin-right: 30px;
+  }
+}
+
+.navigation__link {
+  display: block;
+  padding: 11px 0;
+  @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(two));
+
+  @include mixBreakpoint(large) {
+    padding: 87px 0;
+  }
+
+  @include itemTransition(color);
+
+  &:hover,
+  &:focus {
+    color: funColor(accent);
+  }
+}

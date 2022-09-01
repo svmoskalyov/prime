@@ -1,4 +1,9 @@
-//  Main content containers
+body {
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
 .container {
   max-width: $max-width-container;
   margin-left: auto;
@@ -7,15 +12,15 @@
   padding-right: 15px;
   width: 100%;
 
-  @include respond-to(small) {
-    width: itemPoint(small);
+  @include mixBreakpoint(small) {
+    width: funPoint(small);
   }
 
-  @include respond-to(medium) {
-    width: itemPoint(medium);
+  @include mixBreakpoint(medium) {
+    width: funPoint(medium);
   }
 
-  @include respond-to(huge) {
-    width: itemPoint(huge);
+  @include mixBreakpoint(large) {
+    width: funPoint(large);
   }
 }

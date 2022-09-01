@@ -1,23 +1,23 @@
-@function itemFont($key) {
+@function funFont($key) {
   @return map-get($text-font, $key);
 }
 
-@function itemWght($key) {
+@function funWght($key) {
   @return map-get($text-wght, $key);
 }
 
-@function itemSize($key) {
+@function funSize($key) {
   @return map-get($text-size, $key);
 }
 
-@function itemLineHeight($key) {
+@function funLineHeight($key) {
   @return map-get($text-line-height, $key);
 }
 
-@function itemColor($key) {
+@function funColor($key) {
   @return map-get($colors, $key);
 }
 
-@function itemPoint($key) {
+@function funPoint($key) {
   @return map-get($pointbreak, $key);
 }
