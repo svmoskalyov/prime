@@ -1,0 +1,7 @@
+.about__text:not(:last-child) {
+  margin-bottom: 15px;
+
+  @include mixBreakpoint(large) {
+    margin-bottom: 30px;
+  }
+}

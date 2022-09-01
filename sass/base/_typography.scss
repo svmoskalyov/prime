@@ -21,3 +21,31 @@ body {
     @include mixTypography(funWght(bold), funSize(extrabig), funLineHeight(two));
   }
 }
+
+.title {
+  margin-bottom: 30px;
+  @include mixTypography(funWght(bold), funSize(goodly), funLineHeight(two));
+
+  @include mixBreakpoint(large) {
+    margin-bottom: 60px;
+    @include mixTypography(funWght(bold), funSize(larg), funLineHeight(two));
+  }
+}
+
+.subtitle {
+  margin-bottom: 15px;
+  @include mixTypography(funWght(semibold), funSize(babig), funLineHeight(two));
+
+  @include mixBreakpoint(large) {
+    margin-bottom: 25px;
+    @include mixTypography(funWght(semibold), funSize(goodly), funLineHeight(two));
+  }
+}
+
+.text {
+  @include mixTypography(funWght(regular), funSize(med), funLineHeight(one));
+
+  @include mixBreakpoint(large) {
+    @include mixTypography(funWght(regular), funSize(norm), funLineHeight(one));
+  }
+}

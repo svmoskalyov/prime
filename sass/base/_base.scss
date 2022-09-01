@@ -24,3 +24,11 @@ body {
     width: funPoint(large);
   }
 }
+
+.section {
+  padding: 50px 0;
+
+  @include mixBreakpoint(large) {
+    padding: 140px 0;
+  }
+}
