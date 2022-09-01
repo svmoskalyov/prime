@@ -36,7 +36,7 @@
 }
 
 .navigation__list {
-  @media screen and (max-width: funPoint(large)) {
+  @include mixBreakpoint(large-max) {
     @include mixPosition(fixed);
     z-index: 10;
 

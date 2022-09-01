@@ -4,3 +4,20 @@ body {
   color: funColor(text);
   background-color: funColor(body);
 }
+
+.hero__heading {
+  @include mixTypography(funWght(regular), funSize(goodly), funLineHeight(two));
+  color: funColor(body);
+
+  @include mixBreakpoint(large) {
+    @include mixTypography(funWght(regular), funSize(larg), funLineHeight(two));
+  }
+}
+
+.hero__text {
+  @include mixTypography(funWght(bold), funSize(great), funLineHeight(two));
+
+  @include mixBreakpoint(large) {
+    @include mixTypography(funWght(bold), funSize(extrabig), funLineHeight(two));
+  }
+}
