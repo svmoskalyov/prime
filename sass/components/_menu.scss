@@ -1,13 +1,16 @@
 .menu-button {
-  z-index: 11;
-  position: relative;
 
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
+//   position: relative;
+  @include mixPosition;
+    z-index: 11;
+
+//   display: inline-flex;
+    @include mixFlex(inline-flex);
+//   margin: 0;
+//   padding: 0;
+//   border: none;
   border-radius: 4px;
-  background-color: transparent;
+//   background-color: transparent;
 
   &__close {
     display: none;
@@ -24,10 +27,11 @@
 
     .menu-button__close {
       display: block;
-      cursor: pointer;
+    //   cursor: pointer;
       stroke: funColor(body);
 
-      transition: stroke 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    //   transition: stroke 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include itemTransition(stroke);
 
       &:hover,
       &:focus {
