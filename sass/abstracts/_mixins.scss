@@ -45,6 +45,18 @@
   }
 }
 
+@mixin mixHiden($value: false) {
+  @if $value == hiden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  } @else if $value == appear {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+  }
+}
+
 // @mixin photo($photo) {
 //   background-image: url($photo);
 //   background-repeat: no-repeat;
@@ -67,18 +79,6 @@
 // type-of($shadows) == 'arglist'
 // …
 // }
-
-@mixin mixHiden($value: false) {
-  @if $value == hiden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  } @else if $value == appear {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: initial;
-  }
-}
 
 // @mixin on-event($self: false) {
 //   @if $self {
