@@ -22,13 +22,13 @@
   justify-content: center;
 }
 
-// @mixin itemTransition($props...) {
-//   $result: ();
-//   @each $prop in $props {
-//     $result: append($result, ($prop 250ms cubic-bezier(0.4, 0, 0.2, 1)), $separator: comma);
-//   }
-//   transition: $result;
-// }
+@mixin itemTransition($props...) {
+  $result: ();
+  @each $prop in $props {
+    $result: append($result, ($prop 250ms cubic-bezier(0.4, 0, 0.2, 1)), $separator: comma);
+  }
+  transition: $result;
+}
 
 @mixin mixBreakpoint($breakpoint) {
   $raw-query: map-get($breakpoints, $breakpoint);
