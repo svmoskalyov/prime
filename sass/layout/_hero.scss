@@ -45,3 +45,11 @@
     }
   }
 }
+
+.hero__container {
+  padding: 261px 40px;
+
+  @include mixBreakpoint(large) {
+    padding: 288px 141px;
+  }
+}

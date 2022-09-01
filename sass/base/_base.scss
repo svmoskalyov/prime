@@ -16,9 +16,9 @@ body {
     width: funPoint(small);
   }
 
-  @include mixBreakpoint(medium) {
-    width: funPoint(medium);
-  }
+  // @include mixBreakpoint(medium) {
+  //   width: funPoint(medium);
+  // }
 
   @include mixBreakpoint(large) {
     width: funPoint(large);
