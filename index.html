@@ -61,8 +61,8 @@
         </div>
       </section>
 
-      <section class="section" aria-label="про мене">
-        <div class="container about">
+      <section class="section about" aria-label="про мене">
+        <div class="container">
           <h2 class="title">Про мене</h2>
           <p class="text about__text">
             Вітаю всіх на своєму сайті! Мене звати Сергій, я з Івано-Франківська. Займаюся
@@ -79,25 +79,49 @@
         </div>
       </section>
 
-      <!-- Навички -->
-      <section class="section" aria-label="навички">
+      <section class="section skills" aria-label="навички">
         <div class="container">
           <h2 class="title">Навички</h2>
-          <img src="" alt="Хлопець за компьютером програмує" />
-          <ul>
-            <li>
-              <span>html</span>
-              <img src="" alt="" />
-            </li>
-            <li>
-              <span>css</span>
-              <img src="" alt="" />
-            </li>
-            <li>
-              <span>js</span>
-              <img src="" alt="" />
-            </li>
-          </ul>
+          <div class="skills__box">
+            <picture>
+              <source
+                srcset="
+                  ./images/portrait-mob.jpg    300w,
+                  ./images/portrait-des.jpg    415w,
+                  ./images/portrait-mob@2x.jpg 600w,
+                  ./images/portrait-des@2x.jpg 830w
+                "
+                sizes="(min-width: 1170px) 300px, 415px"
+                type="image/jpeg"
+              />
+              <img
+                class="skills__img"
+                src="./images/portrait-mob.jpg"
+                alt="хлопець за компьютером програмує"
+              />
+            </picture>
+
+            <ul class="skills__list">
+              <li class="skills__item">
+                <span class="skills__text">html</span>
+                <div class="skills__bar">
+                  <div class="skills__progress-line"></div>
+                </div>
+              </li>
+              <li class="skills__item">
+                <span class="skills__text">css</span>
+                <div class="skills__bar">
+                  <div class="skills__progress-line"></div>
+                </div>
+              </li>
+              <li class="skills__item">
+                <span class="skills__text">js</span>
+                <div class="skills__bar">
+                  <div class="skills__progress-line"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
