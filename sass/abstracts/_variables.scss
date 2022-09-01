@@ -44,6 +44,9 @@ $breakpoints: (
   'large': (
     min-width: 1200px,
   ),
+  'large-max': (
+    max-width: 1200px,
+  ),
   'medium': (
     min-width: 768px,
   ),
