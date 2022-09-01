@@ -1,0 +1,85 @@
+.skills__box {
+  @include mixBreakpoint(large) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.skills__img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+
+  @include mixBreakpoint(large) {
+    width: 415px;
+    height: 450px;
+    margin-right: 90px;
+  }
+}
+
+.skills__list {
+  text-align: center;
+  text-transform: uppercase;
+
+  @include mixBreakpoint(large) {
+    width: 665px;
+    height: 268px;
+  }
+}
+
+.skills__item {
+  @include mixBreakpoint(large) {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 86px;
+    }
+  }
+}
+
+.skills__item:nth-child(1) {
+  .skills__progress-line {
+    width: 90%;
+    height: 32px;
+    background-color: funColor(accent);
+  }
+
+  @include mixBreakpoint(large) {
+    .skills__text {
+      margin-right: 5%;
+    }
+  }
+}
+
+.skills__item:nth-child(2) {
+  .skills__progress-line {
+    width: 80%;
+    height: 32px;
+    background-color: funColor(accent);
+  }
+  @include mixBreakpoint(large) {
+    .skills__text {
+      margin-right: 8%;
+    }
+  }
+}
+
+.skills__item:nth-child(3) {
+  .skills__progress-line {
+    width: 60%;
+    height: 32px;
+    background-color: funColor(accent);
+  }
+  @include mixBreakpoint(large) {
+    .skills__text {
+      margin-right: 10%;
+    }
+  }
+}
+
+.skills__bar {
+  width: 100%;
+  height: 32px;
+  background-color: funColor(progbar);
+}
