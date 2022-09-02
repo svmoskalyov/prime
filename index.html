@@ -125,7 +125,6 @@
         </div>
       </section>
 
-      <!-- Послуги -->
       <section class="section service" aria-label="послуги">
         <div class="container">
           <h2 class="title">Послуги</h2>
@@ -160,35 +159,48 @@
         </div>
       </section>
 
-      <!-- Мої роботи -->
-      <section class="section" aria-label="мої роботи">
+      <section class="section works" aria-label="мої роботи">
         <div class="container">
           <h2 class="title">Мої роботи</h2>
-          <ul>
-            <li>
-              <button>Усі роботи</button>
+          <ul class="filter__list">
+            <li class="filter__item">
+              <button class="button filter__button" type="button">Усі роботи</button>
             </li>
-            <li>
-              <button>Лендінги</button>
+            <li class="filter__item">
+              <button class="button filter__button" type="button">Лендінги</button>
             </li>
-            <li>
-              <button>Корпоративні</button>
+            <li class="filter__item">
+              <button class="button filter__button" type="button">Корпоративні</button>
             </li>
-            <li>
-              <button>E-commerce</button>
+            <li class="filter__item">
+              <button class="button filter__button" type="button">E-commerce</button>
             </li>
           </ul>
 
-          <ul>
-            <li><img src="" alt="" /></li>
-            <li><img src="" alt="" /></li>
-            <li><img src="" alt="" /></li>
-            <li><img src="" alt="" /></li>
-            <li><img src="" alt="" /></li>
-            <li><img src="" alt="" /></li>
+          <ul class="card__list">
+            <li class="card__item">
+            <picture>
+              <source
+                srcset="
+                  ./images/ 300w,
+                  ./images/ 415w,
+                  ./images/ 600w,
+                  ./images/ 830w
+                "
+                sizes="(min-width: 1170px) 300px, 415px"
+                type="image/jpeg"
+              />
+              <img
+                class="card__img"
+                src="./images/"
+                alt=""
+              />
+            </picture>
+            </li>
+ 
           </ul>
 
-          <button>Повне портфоліо робіт</button>
+          <button class="button work__button" type="button">Повне портфоліо робіт</button>
         </div>
       </section>
 
