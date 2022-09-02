@@ -1,0 +1,65 @@
+.filter__list {
+  margin-bottom: 30px;
+  text-align: center;
+
+  @include mixBreakpoint(large) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.filter__item:not(:last-child) {
+  margin-bottom: 15px;
+
+  @include mixBreakpoint(large) {
+    margin-right: 45px;
+  }
+}
+
+.filter__button {
+  @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(one));
+  cursor: pointer;
+  @include itemTransition(color);
+
+  @include mixBreakpoint(large) {
+    @include mixTypography(funWght(semibold), funSize(big), funLineHeight(one));
+  }
+
+  &:hover,
+  &:focus {
+    color: funColor(accent);
+  }
+}
+
+.card__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-bottom: 42px;
+
+  @include mixBreakpoint(large) {
+    margin-right: -30px;
+    margin-bottom: 60px;
+  }
+}
+
+.card__item {
+  margin-right: 15px;
+  margin-bottom: 15px;
+
+  @include mixBreakpoint(large) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.work__button {
+  display: block;
+  padding: 18px 24px;
+  margin: auto;
+
+  color: funColor(body);
+  background-color: funColor(bg-color);
+
+  @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(two));
+}
