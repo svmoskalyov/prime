@@ -1,0 +1,30 @@
+// .section {
+// }
+// .service {
+// }
+// .container {
+// }
+// .title {
+// }
+.service__list {
+    display: flex;
+}
+// .service__item {
+// }
+.service__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.service__icon {
+  display: block;
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+}
+// .subtitle {
+// }
+// .service__subtitle {
+// }
+// .text {
+// }
+// .service__text {
+// }

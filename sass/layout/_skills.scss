@@ -1,3 +1,9 @@
+.skills {
+  @include mixBreakpoint(large) {
+    background-color: funColor(bg-grey);
+  }
+}
+
 .skills__box {
   @include mixBreakpoint(large) {
     display: flex;
