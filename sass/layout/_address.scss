@@ -22,6 +22,12 @@
 .address__link {
   color: funColor(accent);
   @include mixTypography(funWght(regular), funSize(med), funLineHeight(one));
+  @include itemTransition(color);
+
+  &:hover,
+  &:focus {
+    color: funColor(progbar);
+  }
 }
 
 .social {
@@ -34,6 +40,13 @@
 
 .social__link {
   display: flex;
+  fill: funColor(accent);
+  @include itemTransition(fill);
+
+  &:hover,
+  &:focus {
+    fill: funColor(progbar);
+  }
 }
 
 .message {
@@ -116,6 +129,6 @@
 
   &:hover,
   &:focus {
-    color: funColor(text);
+    color: funColor(progbar);
   }
 }

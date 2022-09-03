@@ -977,6 +977,11 @@ body {
   font-size: 16px;
   line-height: 1.6;
   font-style: normal;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.address__link:hover, .address__link:focus {
+  color: #ccc;
 }
 
 .social {
@@ -993,6 +998,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  fill: #005541;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social__link:hover, .social__link:focus {
+  fill: #ccc;
 }
 
 @media screen and (min-width: 1170px) {
@@ -1106,7 +1117,7 @@ body {
   font-style: normal;
 }
 .message__button:hover, .message__button:focus {
-  color: #333;
+  color: #ccc;
 }
 
 .menu-button {
