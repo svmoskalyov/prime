@@ -26,3 +26,48 @@
 .social__link {
   display: flex;
 }
+
+.message__field {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.message__label {
+  display: inline-block;
+  margin-bottom: 4px;
+
+  color: funColor(text);
+
+  @include mixTypography(funWght(semibold), funSize(smal), funLineHeight(two));
+}
+
+.message__input {
+  padding: 0 15px;
+
+  width: 100%;
+  height: 44px;
+
+  color: funColor(text-placeholder);
+  background-color: funColor(bg-grey);
+  @include mixTypography(funWght(regular), funSize(smal), funLineHeight(two));
+}
+
+.message__comment {
+  padding: 15px;
+
+  width: 100%;
+  height: 115px;
+
+  resize: none;
+
+  background-color: funColor(bg-grey);
+
+  &::placeholder {
+    color: funColor(text-placeholder);
+    @include mixTypography(funWght(regular), funSize(smal), funLineHeight(two));
+  }
+}
+
+.message__button {
+}

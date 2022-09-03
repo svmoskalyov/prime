@@ -365,7 +365,29 @@
           </address>
 
 
-          
+          <form class="message">
+            <label class="message__field">
+                <span class="message__label">Ваше ім’я</span>
+                <input class="message__input" name="name" type="text" placeholder="Іван">
+            </label>
+            <label class="message__field">
+                <span class="message__label">Номер телефона</span>
+                <input class="message__input" name="tel" type="tel" placeholder="+380501111111">
+            </label>
+            <label class="message__field">
+              <span class="message__label">Ваше повідомлення</span>
+              <textarea
+                class="message__comment"
+                name="comment"
+                placeholder="Текст вашого повідомлення"
+              ></textarea>
+            </label>
+
+            <button class="button message__button" type="submit">
+              Надіслати
+            </button>
+          </form>
+
 
 
         </div>
