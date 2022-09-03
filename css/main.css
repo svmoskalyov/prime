@@ -945,6 +945,10 @@ body {
   }
 }
 
+.address__text {
+  margin-bottom: 30px;
+}
+
 .menu-button {
   position: relative;
   top: 0;
