@@ -1,0 +1,46 @@
+// .section {
+// }
+// .statistic {
+// }
+// .container {
+// }
+// .title {
+// }
+
+.statistic__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.statistic__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  text-align: center;
+  background-color: funColor(progbar);
+
+  width: calc((100% - 15px) / 2);
+
+  &:not(:nth-child(2n)) {
+    margin-right: 15px;
+  }
+
+  &:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 15px;
+  }
+}
+
+// .statistic__icon {
+// }
+// .text {
+// }
+
+.statistic__text {
+  @include mixTypography(funWght(regular), funSize(smal), funLineHeight(two));
+}
+
+.statistic__count {
+  @include mixTypography(funWght(semibold), funSize(goodly), funLineHeight(two));
+}
