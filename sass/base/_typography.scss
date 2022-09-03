@@ -42,7 +42,12 @@ body {
 
   @include mixBreakpoint(large) {
     margin-bottom: 60px;
+    text-align: start;
     @include mixTypography(funWght(bold), funSize(larg), funLineHeight(two));
+  }
+
+  &--center {
+    text-align: center;
   }
 }
 
