@@ -1,46 +1,51 @@
-// .section {
-// }
-// .statistic {
-// }
-// .container {
-// }
-// .title {
-// }
-
 .statistic__list {
   display: flex;
   flex-wrap: wrap;
+
+  @include mixBreakpoint(large) {
+    justify-content: space-between;
+  }
 }
 
 .statistic__item {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 20px;
+  flex-direction: column;
+  padding: 15px;
   text-align: center;
-  background-color: funColor(progbar);
+  background-color: funColor(bg-grey);
 
-  width: calc((100% - 15px) / 2);
+  @include mixBreakpoint(large-max) {
+    width: calc((100% - 15px) / 2);
 
-  &:not(:nth-child(2n)) {
-    margin-right: 15px;
+    &:not(:nth-child(2n)) {
+      margin-right: 15px;
+    }
+
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 15px;
+    }
   }
 
-  &:not(:nth-last-child(-n + 2)) {
-    margin-bottom: 15px;
+  @include mixBreakpoint(large) {
+    width: 270px;
+    height: 270px;
   }
 }
 
-// .statistic__icon {
-// }
-// .text {
-// }
-
 .statistic__text {
   @include mixTypography(funWght(regular), funSize(smal), funLineHeight(two));
+
+  @include mixBreakpoint(large) {
+    @include mixTypography(funWght(regular), funSize(norm), funLineHeight(two));
+  }
 }
 
 .statistic__count {
   @include mixTypography(funWght(semibold), funSize(goodly), funLineHeight(two));
+
+  @include mixBreakpoint(large) {
+    @include mixTypography(funWght(semibold), funSize(great), funLineHeight(two));
+  }
 }
