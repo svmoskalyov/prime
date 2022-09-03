@@ -1,12 +1,18 @@
-.address {
-margin-bottom: 30px;
-
+.address__box {
   @include mixBreakpoint(large) {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
 .address__list {
-  margin-bottom: 30px;
+  @include mixBreakpoint(large-max) {
+    margin-bottom: 30px;
+  }
+
+  @include mixBreakpoint(large) {
+    width: 531px;
+  }
 }
 
 .address__item:not(:last-child) {
@@ -30,10 +36,31 @@ margin-bottom: 30px;
   display: flex;
 }
 
+.message {
+  @include mixBreakpoint(large) {
+    width: 540px;
+  }
+}
+
 .message__field {
   display: block;
   margin-bottom: 10px;
   text-align: left;
+}
+
+.message__field:nth-child(-n + 2) {
+  @include mixBreakpoint(large) {
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 250px;
+    height: 72px;
+  }
+}
+
+.message__field:first-child {
+  @include mixBreakpoint(large) {
+    margin-right: 30px;
+  }
 }
 
 .message__label {
@@ -43,6 +70,10 @@ margin-bottom: 30px;
   color: funColor(text);
 
   @include mixTypography(funWght(semibold), funSize(smal), funLineHeight(two));
+
+  @include mixBreakpoint(large) {
+    margin-bottom: 10px;
+  }
 }
 
 .message__input {

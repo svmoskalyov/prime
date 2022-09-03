@@ -323,69 +323,72 @@
         <div class="container">
           <h2 class="title">Контакти</h2>
 
-          <address class="address">
-            <ul class="address__list">
-              <li class="address__item">
-                <p class="text address__text">
-                  Вийти зі мною на зв’язок можна, скориставшись контактною формою, або напряму за
-                  номером телефона, email, у соцмережах:
-                </p>
-              </li>
-              <li class="address__item">
-                <a class="address__link" href="tel:+380501111111">+38 (050) 111 11 11</a>
-              </li>
-              <li class="address__item">
-                <a class="address__link" href="mailto:frontend-monster@email.com" lang="en"
-                  >frontend-monster@email.com</a
-                >
-              </li>
-            </ul>
+          <div class="address__box">
+            <address>
+              <ul class="address__list">
+                <li class="address__item">
+                  <p class="text address__text">
+                    Вийти зі мною на зв’язок можна, скориставшись контактною формою, або напряму за
+                    номером телефона, email, у соцмережах:
+                  </p>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="tel:+380501111111">+38 (050) 111 11 11</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="mailto:frontend-monster@email.com" lang="en"
+                    >frontend-monster@email.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <ul class="social">
+                    <li class="social__item">
+                      <a class="social__link" href="#" aria-label="instagram">
+                        <svg class="social__icon" width="44" height="44">
+                          <use href="./images/icons.svg#instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social__link" href="#" aria-label="facebook">
+                        <svg class="social__icon" width="44" height="44">
+                          <use href="./images/icons.svg#facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social__link" href="#" aria-label="telegram">
+                        <svg class="social__icon" width="44" height="44">
+                          <use href="./images/icons.svg#telegram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </address>
 
-            <ul class="social">
-              <li class="social__item">
-                <a class="social__link" href="#" aria-label="instagram">
-                  <svg class="social__icon" width="44" height="44">
-                    <use href="./images/icons.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="#" aria-label="facebook">
-                  <svg class="social__icon" width="44" height="44">
-                    <use href="./images/icons.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="#" aria-label="telegram">
-                  <svg class="social__icon" width="44" height="44">
-                    <use href="./images/icons.svg#telegram"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </address>
+            <form class="message">
+              <label class="message__field">
+                <span class="message__label">Ваше ім’я</span>
+                <input class="message__input" name="name" type="text" placeholder="Іван" />
+              </label>
+              <label class="message__field">
+                <span class="message__label">Номер телефона</span>
+                <input class="message__input" name="tel" type="tel" placeholder="+380501111111" />
+              </label>
+              <label class="message__field">
+                <span class="message__label">Ваше повідомлення</span>
+                <textarea
+                  class="message__comment"
+                  name="comment"
+                  placeholder="Текст вашого повідомлення"
+                ></textarea>
+              </label>
 
-          <form class="message">
-            <label class="message__field">
-              <span class="message__label">Ваше ім’я</span>
-              <input class="message__input" name="name" type="text" placeholder="Іван" />
-            </label>
-            <label class="message__field">
-              <span class="message__label">Номер телефона</span>
-              <input class="message__input" name="tel" type="tel" placeholder="+380501111111" />
-            </label>
-            <label class="message__field">
-              <span class="message__label">Ваше повідомлення</span>
-              <textarea
-                class="message__comment"
-                name="comment"
-                placeholder="Текст вашого повідомлення"
-              ></textarea>
-            </label>
-
-            <button class="button message__button" type="submit">Надіслати</button>
-          </form>
+              <button class="button message__button" type="submit">Надіслати</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
