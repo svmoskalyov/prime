@@ -945,8 +945,40 @@ body {
   }
 }
 
-.address__text {
+.address {
+  padding: 30px 0;
+}
+
+.address__list {
   margin-bottom: 30px;
+}
+
+.address__item:first-child {
+  margin-bottom: 15px;
+}
+
+.address__link {
+  color: #005541;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  font-style: normal;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .menu-button {

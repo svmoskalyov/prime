@@ -1,27 +1,28 @@
-// .section {
-// }
-// .address {
-// }
-// .container {
-// }
-// .title {
-// }
-
-.address__text {
-    margin-bottom: 30px;
+.address {
+  padding: 30px 0;
 }
 
-// .address__list {
-// }
-// .address__item {
-// }
-// .address__link {
-// }
-// .social {
-// }
-// .social__item {
-// }
-// .social__link {
-// }
-// .social__icon {
-// }
+.address__list {
+  margin-bottom: 30px;
+}
+
+.address__item:first-child {
+  margin-bottom: 15px;
+}
+
+.address__link {
+  color: funColor(accent);
+  @include mixTypography(funWght(regular), funSize(med), funLineHeight(one));
+}
+
+.social {
+  display: flex;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__link {
+  display: flex;
+}
