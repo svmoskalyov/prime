@@ -946,14 +946,13 @@ body {
 }
 
 .address {
-  padding: 30px 0;
+  margin-bottom: 30px;
 }
-
 .address__list {
   margin-bottom: 30px;
 }
 
-.address__item:first-child {
+.address__item:not(:last-child) {
   margin-bottom: 15px;
 }
 
