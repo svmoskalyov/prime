@@ -59,7 +59,14 @@
   margin: auto;
 
   color: funColor(body);
-  background-color: funColor(bg-color);
+  background-color: funColor(accent);
+  cursor: pointer;
+  @include itemTransition(color);
 
   @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(two));
+
+  &:hover,
+  &:focus {
+    color: funColor(text);
+  }
 }
