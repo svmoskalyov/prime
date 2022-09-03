@@ -70,4 +70,18 @@
 }
 
 .message__button {
+  display: block;
+  padding: 12px 27px;
+
+  color: funColor(body);
+  background-color: funColor(accent);
+  cursor: pointer;
+  @include itemTransition(color);
+
+  @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(two));
+
+  &:hover,
+  &:focus {
+    color: funColor(text);
+  }
 }
