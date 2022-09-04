@@ -18,6 +18,14 @@
   background-position: center;
   background-size: cover;
   background-color: funColor(bg-color);
+
+  &__container {
+    padding: 261px 40px;
+
+    @include mixBreakpoint(large) {
+      padding: 288px 141px;
+    }
+  }
 }
 
 @include mixBreakpoint(large-max) {
@@ -43,13 +51,5 @@
       background-image: linear-gradient(to right, rgba(0, 38, 29, 0.5), rgba(0, 38, 29, 0.5)),
         url('../images/bg-desktop@2x.jpg');
     }
-  }
-}
-
-.hero__container {
-  padding: 261px 40px;
-
-  @include mixBreakpoint(large) {
-    padding: 288px 141px;
   }
 }

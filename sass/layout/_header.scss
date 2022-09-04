@@ -2,18 +2,6 @@
   background-color: funColor(bg-color);
 }
 
-.navigation {
-  @include mixPosition;
-  @include mixFlex;
-  justify-content: space-between;
-  min-height: 50px;
-
-  @include mixBreakpoint(large) {
-    min-height: 193px;
-    justify-content: space-evenly;
-  }
-}
-
 .logo {
   @include mixPosition;
   z-index: 12;
@@ -25,64 +13,76 @@
     padding-top: 70px;
     padding-bottom: 70px;
   }
-}
 
-.logo__img {
-  @include mixSize(110px, 36px);
+  &__img {
+    @include mixSize(110px, 36px);
 
-  @include mixBreakpoint(large) {
-    @include mixSize(158px, 52px);
+    @include mixBreakpoint(large) {
+      @include mixSize(158px, 52px);
+    }
   }
 }
 
-.navigation__list {
-  @include mixBreakpoint(large-max) {
-    @include mixPosition(fixed);
-    z-index: 10;
+.navigation {
+  @include mixPosition;
+  @include mixFlex;
+  justify-content: space-between;
+  min-height: 50px;
 
-    @include mixSize(100vw, 100vh);
+  @include mixBreakpoint(large) {
+    min-height: 193px;
+    justify-content: space-evenly;
+  }
 
-    padding: 80px 20px 15px;
-    text-align: center;
+  &__list {
+    @include mixBreakpoint(large-max) {
+      @include mixPosition(fixed);
+      z-index: 10;
 
-    color: funColor(body);
-    background-color: funColor(bg-color);
+      @include mixSize(100vw, 100vh);
 
-    @include mixHiden(hiden);
-    @include itemTransition(opacity, visibility);
+      padding: 80px 20px 15px;
+      text-align: center;
 
-    &.is-open {
-      @include mixHiden(appear);
+      color: funColor(body);
+      background-color: funColor(bg-color);
+
+      @include mixHiden(hiden);
+      @include itemTransition(opacity, visibility);
+
+      &.is-open {
+        @include mixHiden(appear);
+      }
+
+      overflow: auto;
     }
 
-    overflow: auto;
+    @include mixBreakpoint(large) {
+      @include mixFlex;
+      color: funColor(body);
+    }
   }
 
-  @include mixBreakpoint(large) {
-    @include mixFlex;
-    color: funColor(body);
-  }
-}
-
-.navigation__item:not(:last-child) {
-  @include mixBreakpoint(large) {
-    margin-right: 30px;
-  }
-}
-
-.navigation__link {
-  display: block;
-  padding: 11px 0;
-  @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(two));
-
-  @include mixBreakpoint(large) {
-    padding: 87px 0;
+  &__item:not(:last-child) {
+    @include mixBreakpoint(large) {
+      margin-right: 30px;
+    }
   }
 
-  @include itemTransition(color);
+  &__link {
+    display: block;
+    padding: 11px 0;
+    @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(two));
 
-  &:hover,
-  &:focus {
-    color: funColor(accent);
+    @include mixBreakpoint(large) {
+      padding: 87px 0;
+    }
+
+    @include itemTransition(color);
+
+    &:hover,
+    &:focus {
+      color: funColor(accent);
+    }
   }
 }

@@ -1,56 +1,60 @@
-.filter__list {
-  margin-bottom: 30px;
-  text-align: center;
-
-  @include mixBreakpoint(large) {
-    @include mixFlex;
-  }
-}
-
-.filter__item:not(:last-child) {
-  @include mixBreakpoint(large-max) {
-    margin-bottom: 15px;
-  }
-
-  @include mixBreakpoint(large) {
-    margin-right: 45px;
-  }
-}
-
-.filter__button {
-  @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(one));
-  cursor: pointer;
-  @include itemTransition(color);
-
-  @include mixBreakpoint(large) {
-    @include mixTypography(funWght(semibold), funSize(big), funLineHeight(one));
-  }
-
-  &:hover,
-  &:focus {
-    color: funColor(accent);
-  }
-}
-
-.card__list {
-  @include mixFlex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-bottom: 42px;
-
-  @include mixBreakpoint(large) {
-    margin-right: -30px;
-    margin-bottom: 60px;
-  }
-}
-
-.card__item {
-  margin-right: 15px;
-  margin-bottom: 15px;
-
-  @include mixBreakpoint(large) {
-    margin-right: 30px;
+.filter {
+  &__list {
     margin-bottom: 30px;
+    text-align: center;
+
+    @include mixBreakpoint(large) {
+      @include mixFlex;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @include mixBreakpoint(large-max) {
+      margin-bottom: 15px;
+    }
+
+    @include mixBreakpoint(large) {
+      margin-right: 45px;
+    }
+  }
+
+  &__button {
+    @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(one));
+    cursor: pointer;
+    @include itemTransition(color);
+
+    @include mixBreakpoint(large) {
+      @include mixTypography(funWght(semibold), funSize(big), funLineHeight(one));
+    }
+
+    &:hover,
+    &:focus {
+      color: funColor(accent);
+    }
+  }
+}
+
+.card {
+  &__list {
+    @include mixFlex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-bottom: 42px;
+
+    @include mixBreakpoint(large) {
+      margin-right: -30px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__item {
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    @include mixBreakpoint(large) {
+      margin-right: 30px;
+      margin-bottom: 30px;
+    }
   }
 }
 

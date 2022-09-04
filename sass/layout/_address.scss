@@ -1,51 +1,53 @@
-.address__box {
-  @include mixBreakpoint(large) {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.address__list {
-  @include mixBreakpoint(large-max) {
-    margin-bottom: 30px;
+.address {
+  &__box {
+    @include mixBreakpoint(large) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
-  @include mixBreakpoint(large) {
-    width: 531px;
+  &__list {
+    @include mixBreakpoint(large-max) {
+      margin-bottom: 30px;
+    }
+
+    @include mixBreakpoint(large) {
+      width: 531px;
+    }
   }
-}
 
-.address__item:not(:last-child) {
-  margin-bottom: 15px;
-}
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
 
-.address__link {
-  color: funColor(accent);
-  @include mixTypography(funWght(regular), funSize(med), funLineHeight(one));
-  @include itemTransition(color);
+  &__link {
+    color: funColor(accent);
+    @include mixTypography(funWght(regular), funSize(med), funLineHeight(one));
+    @include itemTransition(color);
 
-  &:hover,
-  &:focus {
-    color: funColor(progbar);
+    &:hover,
+    &:focus {
+      color: funColor(progbar);
+    }
   }
 }
 
 .social {
   display: flex;
-}
 
-.social__item:not(:last-child) {
-  margin-right: 20px;
-}
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
 
-.social__link {
-  display: flex;
-  fill: funColor(accent);
-  @include itemTransition(fill);
+  &__link {
+    display: flex;
+    fill: funColor(accent);
+    @include itemTransition(fill);
 
-  &:hover,
-  &:focus {
-    fill: funColor(progbar);
+    &:hover,
+    &:focus {
+      fill: funColor(progbar);
+    }
   }
 }
 
@@ -53,85 +55,76 @@
   @include mixBreakpoint(large) {
     width: 540px;
   }
-}
 
-.message__field {
-  display: block;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-.message__field:nth-child(-n + 2) {
-  @include mixBreakpoint(large) {
-    display: inline-block;
-    margin-bottom: 30px;
-    // width: 250px;
-    // height: 72px;
-    @include mixSize(250px, 72px);
-  }
-}
-
-.message__field:first-child {
-  @include mixBreakpoint(large) {
-    margin-right: 30px;
-  }
-}
-
-.message__label {
-  display: inline-block;
-  margin-bottom: 4px;
-
-  color: funColor(text);
-
-  @include mixTypography(funWght(semibold), funSize(smal), funLineHeight(two));
-
-  @include mixBreakpoint(large) {
+  &__field {
+    display: block;
     margin-bottom: 10px;
+    text-align: left;
   }
-}
 
-.message__input {
-  padding: 0 15px;
+  &__field:nth-child(-n + 2) {
+    @include mixBreakpoint(large) {
+      display: inline-block;
+      margin-bottom: 30px;
+      @include mixSize(250px, 72px);
+    }
+  }
 
-  // width: 100%;
-  // height: 44px;
-  @include mixSize(100%, 44px);
+  &__field:first-child {
+    @include mixBreakpoint(large) {
+      margin-right: 30px;
+    }
+  }
 
-  color: funColor(text-placeholder);
-  background-color: funColor(bg-grey);
-  @include mixTypography(funWght(regular), funSize(smal), funLineHeight(two));
-}
+  &__label {
+    display: inline-block;
+    margin-bottom: 4px;
 
-.message__comment {
-  padding: 15px;
+    color: funColor(text);
 
-  // width: 100%;
-  // height: 115px;
-  @include mixSize(100%, 115px);
+    @include mixTypography(funWght(semibold), funSize(smal), funLineHeight(two));
 
-  resize: none;
+    @include mixBreakpoint(large) {
+      margin-bottom: 10px;
+    }
+  }
 
-  background-color: funColor(bg-grey);
+  &__input {
+    padding: 0 15px;
+    @include mixSize(100%, 44px);
 
-  &::placeholder {
     color: funColor(text-placeholder);
+    background-color: funColor(bg-grey);
     @include mixTypography(funWght(regular), funSize(smal), funLineHeight(two));
   }
-}
 
-.message__button {
-  display: block;
-  padding: 12px 27px;
+  &__comment {
+    padding: 15px;
+    @include mixSize(100%, 115px);
+    resize: none;
 
-  color: funColor(body);
-  background-color: funColor(accent);
-  cursor: pointer;
-  @include itemTransition(color);
+    background-color: funColor(bg-grey);
 
-  @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(two));
+    &::placeholder {
+      color: funColor(text-placeholder);
+      @include mixTypography(funWght(regular), funSize(smal), funLineHeight(two));
+    }
+  }
 
-  &:hover,
-  &:focus {
-    color: funColor(progbar);
+  &__button {
+    display: block;
+    padding: 12px 27px;
+
+    color: funColor(body);
+    background-color: funColor(accent);
+    cursor: pointer;
+    @include itemTransition(color);
+
+    @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(two));
+
+    &:hover,
+    &:focus {
+      color: funColor(progbar);
+    }
   }
 }

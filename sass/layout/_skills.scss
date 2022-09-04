@@ -2,88 +2,88 @@
   @include mixBreakpoint(large) {
     background-color: funColor(bg-grey);
   }
-}
 
-.skills__box {
-  @include mixBreakpoint(large) {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.skills__img {
-  display: block;
-  @include mixSize(100%);
-
-  @include mixBreakpoint(large-max) {
-    margin-bottom: 30px;
-  }
-
-  @include mixBreakpoint(large) {
-    margin-right: 90px;
-    @include mixSize(415px, 450px);
-  }
-}
-
-.skills__list {
-  text-align: center;
-  text-transform: uppercase;
-
-  @include mixBreakpoint(large) {
-    @include mixSize(665px, 268px);
-  }
-}
-
-.skills__item {
-  @include mixBreakpoint(large) {
-    @include mixFlex;
-
-    &:not(:last-child) {
-      margin-bottom: 86px;
+  &__box {
+    @include mixBreakpoint(large) {
+      display: flex;
+      align-items: center;
     }
   }
-}
 
-.skills__item:nth-child(1) {
-  .skills__progress-line {
-    @include mixSize(90%, 32px);
-    background-color: funColor(accent);
-  }
+  &__img {
+    display: block;
+    @include mixSize(100%);
 
-  @include mixBreakpoint(large) {
-    .skills__text {
-      margin-right: 5%;
+    @include mixBreakpoint(large-max) {
+      margin-bottom: 30px;
+    }
+
+    @include mixBreakpoint(large) {
+      margin-right: 90px;
+      @include mixSize(415px, 450px);
     }
   }
-}
 
-.skills__item:nth-child(2) {
-  .skills__progress-line {
-    @include mixSize(80%, 32px);
-    background-color: funColor(accent);
-  }
+  &__list {
+    text-align: center;
+    text-transform: uppercase;
 
-  @include mixBreakpoint(large) {
-    .skills__text {
-      margin-right: 8%;
+    @include mixBreakpoint(large) {
+      @include mixSize(665px, 268px);
     }
   }
-}
 
-.skills__item:nth-child(3) {
-  .skills__progress-line {
-    @include mixSize(60%, 32px);
-    background-color: funColor(accent);
-  }
+  &__item {
+    @include mixBreakpoint(large) {
+      @include mixFlex;
 
-  @include mixBreakpoint(large) {
-    .skills__text {
-      margin-right: 10%;
+      &:not(:last-child) {
+        margin-bottom: 86px;
+      }
     }
   }
-}
 
-.skills__bar {
-  @include mixSize(100%, 32px);
-  background-color: funColor(progbar);
+  &__item:nth-child(1) {
+    .skills__progress-line {
+      @include mixSize(90%, 32px);
+      background-color: funColor(accent);
+    }
+
+    @include mixBreakpoint(large) {
+      .skills__text {
+        margin-right: 5%;
+      }
+    }
+  }
+
+  &__item:nth-child(2) {
+    .skills__progress-line {
+      @include mixSize(80%, 32px);
+      background-color: funColor(accent);
+    }
+
+    @include mixBreakpoint(large) {
+      .skills__text {
+        margin-right: 8%;
+      }
+    }
+  }
+
+  &__item:nth-child(3) {
+    .skills__progress-line {
+      @include mixSize(60%, 32px);
+      background-color: funColor(accent);
+    }
+
+    @include mixBreakpoint(large) {
+      .skills__text {
+        margin-right: 10%;
+      }
+    }
+  }
+
+  &__bar {
+    @include mixSize(100%, 32px);
+    background-color: funColor(progbar);
+  }
 }
