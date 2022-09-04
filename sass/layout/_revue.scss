@@ -8,10 +8,11 @@
     position: relative;
   }
 
-  display: flex;
+  @include mixFlex;
+  // display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  // align-items: center;
 }
 
 .revue__wrap {
@@ -43,27 +44,34 @@
 
 .revue__video {
   z-index: 1;
-  display: flex;
+  // display: flex;
+  @include mixFlex;
 
-  background-image: url('../images/video.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  // background-image: url('../images/video.jpg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+
+  @include mixPhoto('../images/video.jpg');
 
   @include mixBreakpoint(large-max) {
-    position: absolute;
+    @include mixPosition(absolute);
+    // position: absolute;
     top: 27%;
     left: 56%;
 
-    width: 60px;
-    height: 60px;
+    // width: 60px;
+    // height: 60px;
+    @include mixSize(60px);
     border-radius: 50%;
   }
 
   @include mixBreakpoint(large) {
-    position: relative;
-    width: 570px;
-    height: 400px;
+    @include mixPosition;
+    // position: relative;
+    // width: 570px;
+    // height: 400px;
+    @include mixSize(570px, 400px);
   }
 }
 
@@ -72,30 +80,36 @@
   margin: auto;
   content: '';
 
-  background-image: url('../images/play.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  // background-image: url('../images/play.svg');
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // background-position: center;
+
+  @include mixPhoto('../images/play.svg');
 
   @include mixBreakpoint(large-max) {
-    width: 17px;
-    height: 20px;
+    // width: 17px;
+    // height: 20px;
+    @include mixSize(17px, 20px);
   }
 
   @include mixBreakpoint(large) {
-    width: 87px;
-    height: 100px;
+    // width: 87px;
+    // height: 100px;
+    @include mixSize(87px, 100px);
   }
 }
 
 .revue__video::after {
-  position: absolute;
-  top: 0;
-  left: 0;
+  @include mixPosition(absolute);
+  // position: absolute;
+  // top: 0;
+  // left: 0;
   z-index: -1;
   display: block;
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
+  @include mixSize(100%);
   content: '';
 
   background-color: rgba(0, 0, 0, 0.4);

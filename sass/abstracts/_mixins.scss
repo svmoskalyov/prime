@@ -57,12 +57,12 @@
   }
 }
 
-// @mixin photo($photo) {
-//   background-image: url($photo);
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center;
-// }
+@mixin mixPhoto($photo) {
+  background-image: url($photo);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 // @mixin button-theme($color, $color-text-hover: $color-light) {
 //     color: $color;

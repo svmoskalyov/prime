@@ -876,13 +876,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 @media screen and (max-width: 1170px) {
   .revue__content {
@@ -926,6 +929,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-image: url("../images/video.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -934,6 +943,8 @@ body {
 @media screen and (max-width: 1170px) {
   .revue__video {
     position: absolute;
+    top: 0;
+    left: 0;
     top: 27%;
     left: 56%;
     width: 60px;
@@ -944,6 +955,8 @@ body {
 @media screen and (min-width: 1170px) {
   .revue__video {
     position: relative;
+    top: 0;
+    left: 0;
     width: 570px;
     height: 400px;
   }
@@ -955,7 +968,7 @@ body {
   content: "";
   background-image: url("../images/play.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 @media screen and (max-width: 1170px) {
