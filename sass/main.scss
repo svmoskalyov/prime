@@ -9,6 +9,9 @@
 @import 'base/base';
 @import 'base/typography';
 
+@import 'components/buttons';
+@import 'components/menu';
+
 @import 'layout/header';
 @import 'layout/hero';
 @import 'layout/about';
@@ -19,6 +22,3 @@
 @import 'layout/statistic';
 @import 'layout/address';
 @import 'layout/footer';
-
-@import 'components/buttons';
-@import 'components/menu';

@@ -1,3 +1,10 @@
+.works {
+  &__button {
+    padding: 18px 24px;
+    margin: auto;
+  }
+}
+
 .filter {
   &__list {
     margin-bottom: 30px;
@@ -19,17 +26,15 @@
   }
 
   &__button {
+    display: inline-block;
+
+    color: funColor(text);
+    background-color: funColor(body);
+
     @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(one));
-    cursor: pointer;
-    @include itemTransition(color);
 
     @include mixBreakpoint(large) {
       @include mixTypography(funWght(semibold), funSize(big), funLineHeight(one));
-    }
-
-    &:hover,
-    &:focus {
-      color: funColor(accent);
     }
   }
 }
@@ -55,23 +60,5 @@
       margin-right: 30px;
       margin-bottom: 30px;
     }
-  }
-}
-
-.work__button {
-  display: block;
-  padding: 18px 24px;
-  margin: auto;
-
-  color: funColor(body);
-  background-color: funColor(accent);
-  cursor: pointer;
-  @include itemTransition(color);
-
-  @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(two));
-
-  &:hover,
-  &:focus {
-    color: funColor(text);
   }
 }

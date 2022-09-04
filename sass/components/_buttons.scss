@@ -1,27 +1,15 @@
-// .button {
-//     display: inline-block;
-//     padding: ;
-//     min-width: ;
+.button {
+  display: block;
 
-//     font-weight: 400;
-//     font-size: ;
-//     line-height: ;
-//     text-decoration: none;
-//     text-align: center;
+  color: funColor(body);
+  background-color: funColor(accent);
+  @include mixTypography(funWght(semibold), funSize(norm), funLineHeight(two));
 
-//     color: ;
-//     background-color: ;
-//     border-radius: ;
-// border: 1px solid transparent;
-// }
+  cursor: pointer;
+  @include itemTransition(color);
 
-// .button__primary {
-    //     color: ;
-//     background-color: ;
-// }
-
-// .button__secondory {
-//     color: ;
-//     background-color: ;
-// border-color: tomato;
-// }
+  &:hover,
+  &:focus {
+    color: funColor(accent);
+  }
+}
