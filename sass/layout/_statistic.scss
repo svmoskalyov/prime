@@ -8,8 +8,9 @@
 }
 
 .statistic__item {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
+  @include mixFlex;
   justify-content: space-evenly;
   flex-direction: column;
   padding: 15px;
@@ -29,8 +30,9 @@
   }
 
   @include mixBreakpoint(large) {
-    width: 270px;
-    height: 270px;
+    // width: 270px;
+    // height: 270px;
+    @include mixSize(270px);
   }
 }
 
