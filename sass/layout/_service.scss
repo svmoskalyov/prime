@@ -23,15 +23,11 @@
 .service__icon {
   display: block;
   margin-bottom: 10px;
-  // width: 40px;
-  // height: 40px;
   @include mixSize(40px);
 
   @include mixBreakpoint(large) {
     margin-bottom: 30px;
-    // width: 60px;
-    // height: 60px;
-      @include mixSize(60px);
+    @include mixSize(60px);
   }
 }
 

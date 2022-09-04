@@ -8,8 +8,6 @@
 }
 
 .statistic__item {
-  // display: flex;
-  // align-items: center;
   @include mixFlex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -30,8 +28,6 @@
   }
 
   @include mixBreakpoint(large) {
-    // width: 270px;
-    // height: 270px;
     @include mixSize(270px);
   }
 }

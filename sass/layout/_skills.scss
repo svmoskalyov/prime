@@ -13,8 +13,6 @@
 
 .skills__img {
   display: block;
-  // width: 100%;
-  // height: 100%;
   @include mixSize(100%);
 
   @include mixBreakpoint(large-max) {
@@ -23,8 +21,6 @@
 
   @include mixBreakpoint(large) {
     margin-right: 90px;
-    // width: 415px;
-    // height: 450px;
     @include mixSize(415px, 450px);
   }
 }
@@ -34,16 +30,12 @@
   text-transform: uppercase;
 
   @include mixBreakpoint(large) {
-    // width: 665px;
-    // height: 268px;
     @include mixSize(665px, 268px);
   }
 }
 
 .skills__item {
   @include mixBreakpoint(large) {
-    // display: flex;
-    // align-items: center;
     @include mixFlex;
 
     &:not(:last-child) {
@@ -54,8 +46,6 @@
 
 .skills__item:nth-child(1) {
   .skills__progress-line {
-    // width: 90%;
-    // height: 32px;
     @include mixSize(90%, 32px);
     background-color: funColor(accent);
   }
@@ -69,11 +59,10 @@
 
 .skills__item:nth-child(2) {
   .skills__progress-line {
-    // width: 80%;
-    // height: 32px;
     @include mixSize(80%, 32px);
     background-color: funColor(accent);
   }
+
   @include mixBreakpoint(large) {
     .skills__text {
       margin-right: 8%;
@@ -83,11 +72,10 @@
 
 .skills__item:nth-child(3) {
   .skills__progress-line {
-    // width: 60%;
-    // height: 32px;
     @include mixSize(60%, 32px);
     background-color: funColor(accent);
   }
+
   @include mixBreakpoint(large) {
     .skills__text {
       margin-right: 10%;
@@ -96,8 +84,6 @@
 }
 
 .skills__bar {
-  // width: 100%;
-  // height: 32px;
   @include mixSize(100%, 32px);
   background-color: funColor(progbar);
 }

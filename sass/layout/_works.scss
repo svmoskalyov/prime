@@ -3,8 +3,6 @@
   text-align: center;
 
   @include mixBreakpoint(large) {
-    // display: flex;
-    // justify-content: center;
     @include mixFlex;
   }
 }
@@ -35,8 +33,6 @@
 }
 
 .card__list {
-  // display: flex;
-  // justify-content: center;
   @include mixFlex;
   flex-wrap: wrap;
   margin-right: -15px;
