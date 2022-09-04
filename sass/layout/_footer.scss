@@ -1,0 +1,14 @@
+.footer {
+  background-color: funColor(bg-color);
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 110px;
+  @include mixBreakpoint(large) {
+    min-height: 153px;
+  }
+}

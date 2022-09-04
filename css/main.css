@@ -1201,6 +1201,28 @@ body {
   color: #ccc;
 }
 
+.footer {
+  background-color: #00261d;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 110px;
+}
+@media screen and (min-width: 1170px) {
+  .footer__container {
+    min-height: 153px;
+  }
+}
+
 .menu-button {
   position: relative;
   top: 0;
