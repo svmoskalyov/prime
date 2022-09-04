@@ -1,0 +1,74 @@
+.revue-content {
+  /* padding-left: 50px;
+  padding-right: 50px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.revue {
+  text-align: center;
+  background-color: #f6f6f8;
+}
+
+.revue-wrap {
+  padding: 0 50px;
+  max-width: 400px;
+  /* outline: 1px solid tomato; */
+}
+
+.revue-img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.revue-author {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--accent-text-color);
+}
+
+.revue-video {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  width: 570px;
+  height: 400px;
+  background-image: url('../images/video.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+
+  /* outline: 1px solid tomato; */
+}
+
+.revue-video::before {
+  margin: auto;
+  display: block;
+  content: '';
+  width: 87px;
+  height: 100px;
+  background-image: url('../images/play.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.revue-video::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
