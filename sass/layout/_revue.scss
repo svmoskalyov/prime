@@ -1,32 +1,28 @@
-.revue-content {
-      display: flex;
-      flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-
-      @include mixBreakpoint(large) {
-    // justify-content: space-around;
-  }
-
-}
-
 .revue {
   text-align: center;
   background-color: funColor(bg-grey);
 }
 
-.revue-wrap {
+.revue__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.revue__wrap {
+  margin-bottom: 30px;
   padding: 0 50px;
   max-width: 400px;
 }
 
-.revue-img {
+.revue__img {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
 }
 
-.revue-author {
+.revue__author {
   display: block;
   margin-bottom: 20px;
 
@@ -34,7 +30,7 @@
   @include mixTypography(funWght(semibold), funSize(big), funLineHeight(two));
 }
 
-.revue-video {
+.revue__video {
   position: relative;
   z-index: 1;
   display: flex;
@@ -47,7 +43,7 @@
   background-position: center;
 }
 
-.revue-video::before {
+.revue__video::before {
   display: block;
   margin: auto;
   content: '';
@@ -60,7 +56,7 @@
   background-position: center;
 }
 
-.revue-video::after {
+.revue__video::after {
   position: absolute;
   top: 0;
   left: 0;

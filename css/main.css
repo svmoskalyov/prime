@@ -867,7 +867,12 @@ body {
   color: #333;
 }
 
-.revue-content {
+.revue {
+  text-align: center;
+  background-color: #F6F6F8;
+}
+
+.revue__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -879,23 +884,20 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.revue {
-  text-align: center;
-  background-color: #F6F6F8;
-}
 
-.revue-wrap {
+.revue__wrap {
+  margin-bottom: 30px;
   padding: 0 50px;
   max-width: 400px;
 }
 
-.revue-img {
+.revue__img {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
 }
 
-.revue-author {
+.revue__author {
   display: block;
   margin-bottom: 20px;
   color: #005541;
@@ -905,7 +907,7 @@ body {
   font-style: normal;
 }
 
-.revue-video {
+.revue__video {
   position: relative;
   z-index: 1;
   display: -webkit-box;
@@ -919,7 +921,7 @@ body {
   background-position: center;
 }
 
-.revue-video::before {
+.revue__video::before {
   display: block;
   margin: auto;
   content: "";
@@ -931,7 +933,7 @@ body {
   background-position: center;
 }
 
-.revue-video::after {
+.revue__video::after {
   position: absolute;
   top: 0;
   left: 0;
