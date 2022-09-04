@@ -1,7 +1,13 @@
 .revue-content {
-  display: flex;
+      display: flex;
+      flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+
+      @include mixBreakpoint(large) {
+    // justify-content: space-around;
+  }
+
 }
 
 .revue {
