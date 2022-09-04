@@ -10,7 +10,9 @@
 }
 
 .filter__item:not(:last-child) {
-  margin-bottom: 15px;
+  @include mixBreakpoint(large-max) {
+    margin-bottom: 15px;
+  }
 
   @include mixBreakpoint(large) {
     margin-right: 45px;
