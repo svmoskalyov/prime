@@ -65,8 +65,9 @@
   @include mixBreakpoint(large) {
     display: inline-block;
     margin-bottom: 30px;
-    width: 250px;
-    height: 72px;
+    // width: 250px;
+    // height: 72px;
+    @include mixSize(250px, 72px);
   }
 }
 
@@ -92,8 +93,9 @@
 .message__input {
   padding: 0 15px;
 
-  width: 100%;
-  height: 44px;
+  // width: 100%;
+  // height: 44px;
+  @include mixSize(100%, 44px);
 
   color: funColor(text-placeholder);
   background-color: funColor(bg-grey);
@@ -103,8 +105,9 @@
 .message__comment {
   padding: 15px;
 
-  width: 100%;
-  height: 115px;
+  // width: 100%;
+  // height: 115px;
+  @include mixSize(100%, 115px);
 
   resize: none;
 
