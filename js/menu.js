@@ -13,10 +13,3 @@
     document.body.classList.toggle("overflow");
   });
 })();
-
-// $(".navigation__link").click(function () {
-//   $(".menu").removeClass("is-open");
-//   $(".menu-button").removeClass("is-open");
-//   // $(".page-header__btn").removeClass("active");
-//   $("body").removeClass("overflow");
-// });
