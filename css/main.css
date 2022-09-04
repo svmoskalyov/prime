@@ -819,6 +819,7 @@ body {
 .works__button {
   padding: 18px 24px;
   margin: auto;
+  background-color: #00261d;
 }
 
 .filter__list {
@@ -1254,6 +1255,7 @@ body {
 }
 .message__button {
   padding: 12px 27px;
+  background-color: #00261d;
 }
 
 .footer {
