@@ -3,9 +3,10 @@
 }
 
 .footer__container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  @include mixFlex;
 
   min-height: 110px;
   @include mixBreakpoint(large) {

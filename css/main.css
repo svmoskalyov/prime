@@ -659,9 +659,9 @@ body {
 }
 @media screen and (min-width: 1170px) {
   .skills__img {
+    margin-right: 90px;
     width: 415px;
     height: 450px;
-    margin-right: 90px;
   }
 }
 
@@ -684,6 +684,9 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .skills__item:not(:last-child) {
     margin-bottom: 86px;
