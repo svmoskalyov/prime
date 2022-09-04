@@ -1,6 +1,4 @@
 .revue-content {
-  /* padding-left: 50px;
-  padding-right: 50px; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -8,13 +6,12 @@
 
 .revue {
   text-align: center;
-  background-color: #f6f6f8;
+  background-color: funColor(bg-grey);
 }
 
 .revue-wrap {
   padding: 0 50px;
   max-width: 400px;
-  /* outline: 1px solid tomato; */
 }
 
 .revue-img {
@@ -27,34 +24,30 @@
   display: block;
   margin-bottom: 20px;
 
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.3;
-  color: var(--accent-text-color);
+  color: funColor(accent);
+  @include mixTypography(funWght(semibold), funSize(big), funLineHeight(two));
 }
 
 .revue-video {
+  position: relative;
+  z-index: 1;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
   width: 570px;
   height: 400px;
+
   background-image: url('../images/video.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
-  z-index: 1;
-
-  /* outline: 1px solid tomato; */
 }
 
 .revue-video::before {
-  margin: auto;
   display: block;
+  margin: auto;
   content: '';
   width: 87px;
   height: 100px;
+
   background-image: url('../images/play.svg');
   background-repeat: no-repeat;
   background-size: contain;
@@ -62,13 +55,14 @@
 }
 
 .revue-video::after {
-  content: '';
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);
   top: 0;
   left: 0;
+  z-index: -1;
   display: block;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  content: '';
+
+  background-color: rgba(0, 0, 0, 0.4);
 }
